@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.9-b130926.1035 svn-revision#5f6196f2b90e9460065a4c2f4e30e065b245e51e. -->
+<xs:schema xmlns:tns="http://koprvelkyhlad/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://koprvelkyhlad/">
+
+    <xs:element name="addCookingRecipe" type="tns:addCookingRecipe"/>
+    <xs:element name="addCookingRecipeResponse" type="tns:addCookingRecipeResponse"/>
+    <xs:element name="findWithIngredients" type="tns:findWithIngredients"/>
+    <xs:element name="findWithIngredientsResponse" type="tns:findWithIngredientsResponse"/>
+    <xs:element name="findWithKeywords" type="tns:findWithKeywords"/>
+    <xs:element name="findWithKeywordsResponse" type="tns:findWithKeywordsResponse"/>
+    <xs:element name="getCookingRecipe" type="tns:getCookingRecipe"/>
+    <xs:element name="getCookingRecipeResponse" type="tns:getCookingRecipeResponse"/>
+    <xs:element name="removeCookingRecipe" type="tns:removeCookingRecipe"/>
+    <xs:element name="removeCookingRecipeResponse" type="tns:removeCookingRecipeResponse"/>
+    <xs:element name="updateCookingRecipe" type="tns:updateCookingRecipe"/>
+    <xs:element name="updateCookingRecipeResponse" type="tns:updateCookingRecipeResponse"/>
+
+    <xs:complexType name="getCookingRecipe">
+        <xs:sequence>
+            <xs:element name="CookingRecipeID" type="xs:long" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="getCookingRecipeResponse">
+        <xs:sequence>
+            <xs:element name="foundCookingRecipe" type="tns:cookingRecipe" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cookingRecipe">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="author" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ingredients" type="tns:cookingIngredient" nillable="true" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="guide" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cookingIngredient">
+        <xs:sequence>
+            <xs:element name="ingredient" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="quantity" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="addCookingRecipe">
+        <xs:sequence>
+            <xs:element name="newCookingRecipe" type="tns:cookingRecipe" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="addCookingRecipeResponse">
+        <xs:sequence>
+            <xs:element name="newCookingRecipeID" type="xs:long" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="findWithIngredients">
+        <xs:sequence>
+            <xs:element name="ingredients" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="findWithIngredientsResponse">
+        <xs:sequence>
+            <xs:element name="foundCookingRecipesWithIngredients" type="tns:cookingRecipe" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="findWithKeywords">
+        <xs:sequence>
+            <xs:element name="keywords" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="findWithKeywordsResponse">
+        <xs:sequence>
+            <xs:element name="foundCookingRecipesWithKeywords" type="tns:cookingRecipe" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="updateCookingRecipe">
+        <xs:sequence>
+            <xs:element name="cookingRecipeToUpdate" type="tns:cookingRecipe" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="updateCookingRecipeResponse">
+        <xs:sequence>
+            <xs:element name="updatedCookingRecipe" type="tns:cookingRecipe" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="removeCookingRecipe">
+        <xs:sequence>
+            <xs:element name="toRemoveCookingRecipeID" type="xs:long" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="removeCookingRecipeResponse">
+        <xs:sequence>
+            <xs:element name="removeStatus" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

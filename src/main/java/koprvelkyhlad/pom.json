@@ -1,0 +1,48 @@
+[{
+        "id": 1,
+        "name": "Čokoládové muffiny",
+        "author": "jan murin",
+        "ingredients": [{
+                "recipe_id": 1,
+                "ingredient": "kryštálový cukor ",
+                "quantity": "150 g"
+            }],
+        "guide": "V miske si zmiešame všetky suché suroviny (okrem čokolády) a v druhej všetky mokré. Potom ich zmiešame dohromady. Poriadne pomiešame a pridáme na malé kúsky pokrájanú čokoládu.\nCesto plníme do košíčkov a pečieme pri 180°C asi 20 minút."
+    },
+    {
+        "id": 2,
+        "name": "cokoladove",
+        "author": "tomas murin",
+        "ingredients": [{
+                "recipe_id": 2,
+                "ingredient": " hladká múka",
+                "quantity": "380 g"
+            }, {
+                "recipe_id": 2,
+                "ingredient": " prášok do pečiva ",
+                "quantity": "1/2 ks"
+            }, {
+                "recipe_id": 2,
+                "ingredient": " kakao",
+                "quantity": "3 PL"
+            }],
+        "guide": "V miske si zmiešame všetky suché suroviny (okrem čokolády) a v druhej všetky mokré. Potom ich zmiešame dohromady. Poriadne pomiešame a pridáme na malé kúsky pokrájanú čokoládu.\nCesto plníme do košíčkov a pečieme pri 180°C asi 20 minút."
+    }, {
+        "id": 3,
+        "name": "cokoladove",
+        "author": "tomas murin",
+        "ingredients": [{
+                "recipe_id": 3,
+                "ingredient": " hladká múka",
+                "quantity": "380 g"
+            }, {
+                "recipe_id": 3,
+                "ingredient": " prášok do pečiva ",
+                "quantity": "1/2 ks"
+            }, {
+                "recipe_id": 3,
+                "ingredient": " kakao",
+                "quantity": "3 PL"
+            }],
+        "guide": "V miske si zmiešame všetky suché suroviny (okrem čokolády) a v druhej všetky mokré. Potom ich zmiešame dohromady. Poriadne pomiešame a pridáme na malé kúsky pokrájanú čokoládu.\nCesto plníme do košíčkov a pečieme pri 180°C asi 20 minút."
+    }]

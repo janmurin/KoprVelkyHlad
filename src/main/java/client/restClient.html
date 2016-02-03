@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="rest.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+    <title>RestClient</title>
+</head>
+<body>
+<div id="pridatReceptContainer" class="simpleContainer">
+    <h3>Pridat recept</h3>
+    <div class="name">
+        <span>nazov:</span>
+        <input value="" name="name" type="text"/>
+    </div>
+    <div class="author">
+        <span>autor:</span>
+        <input value="" name="author" type="text"/>
+    </div>
+    <div class="ingredients">
+        <span>ingrediencie: <i>(kvantita - nazov)</i></span>
+        <textarea rows="4" cols="35"></textarea>
+    </div>
+    <div class="guide">
+        <span>navod:</span>
+        <textarea rows="4" cols="35"></textarea>
+    </div>
+    <div>
+        <button id="addRecipeButton" onclick="addRecipe()">Pridat</button>
+    </div>
+</div>
+<div id="hladatContainer" class="simpleContainer">
+    <h3>Hladanie receptov</h3>
+    <form action="">
+        <input id="ingrediencieRadio" type="radio" name="typ" value="male" checked="checked"> Ingrediencie<br>
+        <input id="keywordsRadio" type="radio" name="typ" value="female"> Klucove slova
+    </form>
+    <div class="guide">
+        <span>klucove slova alebo ingrediencie: (1 riadok = 1 polozka)</span>
+        <textarea rows="4" cols="35"></textarea>
+    </div>
+    <div>
+        <button id="findRecipesButton" onclick="findRecipes()">Hladat</button>
+    </div>
+</div>
+<div id="hladatExactContainer" class="simpleContainer">
+    <h3>Hladanie receptov ktore obsahuju tieto ingrediencie</h3>
+    <div class="guide">
+        <span>ingrediencie: (1 riadok = 1 polozka)</span>
+        <textarea rows="4" cols="35"></textarea>
+    </div>
+    <div>
+        <button id="findExactRecipesButton" onclick="findExactRecipes()">Hladat</button>
+    </div>
+</div>
+<div id="upravitReceptContainer" class="simpleContainer" style="display:none;">
+    <h3>Upravit recept</h3>
+    <div class="id"><input value="" name="id" type="text" style="display:none;"/></div>
+    <div class="name">
+        <span>nazov:</span>
+        <input value="" name="name" type="text"/>
+    </div>
+    <div class="author">
+        <span>autor:</span>
+        <input value="" name="author" type="text"/>
+    </div>
+    <div class="ingredients">
+        <span>ingrediencie: <i>(kvantita - nazov)</i></span>
+        <textarea rows="4" cols="35"></textarea>
+    </div>
+    <div class="guide">
+        <span>navod:</span>
+        <textarea rows="4" cols="35"></textarea>
+    </div>
+    <div>
+        <button id="editRecipeButton" onclick="editRecipeButtonClick()">Upravit</button>
+    </div>
+</div>
+
+<div style="clear:both">
+    <h2>Zoznam vsetkych receptov</h2>
+    <div>
+        <button id="reloadVsetkyButton" onclick="reloadRecepty()">Nacitaj vsetky</button>
+    </div>
+    <table id="receptyTable" class="receptyTable"></table>
+</div>
+</body>
+</html>

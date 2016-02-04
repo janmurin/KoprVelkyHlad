@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package koprvelkyhlad;
+package home.koprvelkyhlad;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -12,12 +12,13 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  *
  * @author Janco1
  */
-@ResponseStatus(HttpStatus.NOT_FOUND)
-public class NotFoundException extends RuntimeException{
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+public class DataException extends RuntimeException{
 
-    public NotFoundException(String message) {
+    public DataException(String message) {
         super(message);
     }
+    
     
     
 }

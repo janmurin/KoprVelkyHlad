@@ -1,4 +1,4 @@
-package koprvelkyhlad;
+package home.koprvelkyhlad;
 
 import org.hsqldb.Server;
 

@@ -42,11 +42,11 @@ Vyjasnenia
     v prípade voľby variantu I. SOAP môžete i klienta i server implementovať v rovnakej technológii na rovnakej platforme (JAX-WS server + JAX-WS klient).
     v prípade voľby variantu II. REST musíte klientskú stranu implementovať v odlišnej technológii než server. 
  */
-package koprvelkyhlad;
+package home.koprvelkyhlad;
 
-import entity.CookingIngredient;
-import entity.CookingRecipe;
-import entity.RecipeID;
+import home.entity.CookingIngredient;
+import home.entity.CookingRecipe;
+import home.entity.RecipeID;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;

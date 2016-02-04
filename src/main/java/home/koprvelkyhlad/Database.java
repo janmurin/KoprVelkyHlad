@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package koprvelkyhlad;
+package home.koprvelkyhlad;
 
-import entity.CookingIngredientRowMapper;
-import entity.CookingRecipeRowMapper;
-import entity.CookingRecipe;
-import entity.CookingIngredient;
+import home.entity.CookingIngredientRowMapper;
+import home.entity.CookingRecipeRowMapper;
+import home.entity.CookingRecipe;
+import home.entity.CookingIngredient;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.sql.ResultSet;
